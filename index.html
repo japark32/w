@@ -16,28 +16,24 @@
 
       }
 
-      .title-ctr{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        width: 100%;
-        height: 100%;
+      .title-ctr {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        height: 100vh;
       }
 
       h1{
         font:200px 'Viga',sans-serif;
-        border:solid 50px;
+        border:solid 50px white;
         width:1000px;
         height:400px;
         text-align: center;
         padding-top:10px;
         margin: 0;
         cursor: pointer;
+        color: white;
       }
 
       li{
@@ -46,24 +42,42 @@
         list-style-type: none;
         margin-top: 20px;
       }
-
+      li a {
+        color: white;
+        text-decoration: none;
+      }
       .project-list-container {
-        margin-top:50px;
+        margin-top:100px;
+        margin-left: -200px;
+        text-align: left;
+        display: none;
       }
 
     </style>
   </head>
   <body bgcolor="#C3F4DE">
     <div class="title-ctr">
-        <h1>JA.LAB</h1>
+        <h1 onclick="toggleProjects()">JA.LAB</h1>
+    
+      <div class="project-list-container" id="project-list">
+        <ul>
+          <li><a href="/w/project1/" title="리그 오브 레전드">PROJECT:LOL</a></li>
+          <li><a href="/w/project2/" title="로스트아크">PROJECT:LOSTARK</a></li>
+          <li><a href="/w/project3/" title="음악">PROJECT:MUSIC</a></li>
+          <li><a href="/w/project4/" title="총">PROJECT:GUNS</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="project-list-container">
-      <ul>
-        <li><a href="/w/project1/" title="리그 오브 레전드">PROJECT:LOL</a></li>
-        <li><a href="/w/project2/" title="로스트아크">PROJECT:LOSTARK</a></li>
-        <li><a href="/w/project3/" title="음악">PROJECT:MUSIC</a></li>
-        <li><a href="/w/project4/" title="총">PROJECT:GUNS</a></li>
-      </ul>
-    </div>
+
+    <script>
+      function toggleProjects() {
+        var projects = document.getElementById("project-list");
+        if (projects.style.display === "none") {
+          projects.style.display = "block";
+        } else {
+          projects.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
