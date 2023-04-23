@@ -19,6 +19,10 @@
 
 
   <body bgcolor="#7BDDAF">
+    
+    <button id="iconButton"></button>
+    
+    <!-- TITLE SECTION-->
     <div class="title-ctr">
         <h1 onclick="toggleProjects()">JA.LAB</h1>
 
@@ -41,6 +45,15 @@
           projects.style.display = "none";
         }
       }
+      
+      const iconButton = document.getElementById('iconButton');
+      const iconImages = ['icon1.png', 'icon2.png', 'icon3.png'];
+      let currentIndex = 0;
+
+      iconButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % iconImages.length;
+        iconButton.style.backgroundImage = `url(${iconImages[currentIndex]})`;
+      });
     </script>
   </body>
 </html>
