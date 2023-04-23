@@ -52,16 +52,25 @@
       const iconButton = document.getElementById('iconButton');
       const iconImages = ['/w/img/full-volume.svg', '/w/img/half-volume.svg', '/w/img/mute.svg'];
       let currentIndex = 0;
-
+      const bgMusic = document.getElementById('bg-music');
+        
       iconButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % iconImages.length;
-        iconButton.style.backgroundImage = `url(${iconImages[currentIndex]})`;
-     
-        iconButton.classList.add('active');
-        setTimeout(() => {
-          iconButton.classList.remove('active');
-        }, 200);
-      });
+      currentIndex = (currentIndex + 1) % iconImages.length;
+      iconButton.style.backgroundImage = `url(${iconImages[currentIndex]})`;
+
+      if (currentIndex === 0) {
+        bgMusic.volume = 1; // 100% volume
+      } else if (currentIndex === 1) {
+        bgMusic.volume = 0.5; // 50% volume
+      } else {
+        bgMusic.volume = 0; // mute
+      }
+
+      iconButton.classList.add('active');
+      setTimeout(() => {
+        iconButton.classList.remove('active');
+      }, 200);
+    });
     </script>
   </body>
 </html>
