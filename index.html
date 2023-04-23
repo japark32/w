@@ -53,6 +53,11 @@
       iconButton.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % iconImages.length;
         iconButton.style.backgroundImage = `url(${iconImages[currentIndex]})`;
+     
+        iconButton.classList.add('active');
+        setTimeout(() => {
+          iconButton.classList.remove('active');
+        }, 200);
       });
     </script>
   </body>
