@@ -70,4 +70,7 @@ li a {
   transform: rotate(360deg);
 }
 
+#iconButton:hover {
+  cursor: pointer;
+}
 
