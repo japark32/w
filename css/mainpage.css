@@ -58,7 +58,7 @@ li a {
   height: 50px;
   border: none;
   background-color: #fff;
-  background-image: url(icon1.png);
+  background-image: url(/w/img/full-volume.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
