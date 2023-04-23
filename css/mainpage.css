@@ -24,7 +24,10 @@ h1 {
   color: white;
   border: solid 50px white;
   filter: drop-shadow(10px 10px 2px #dd0);
-
+  -webkit-user-select: none;
+  -moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 /* LIST MADE*/
