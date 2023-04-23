@@ -3,6 +3,7 @@
 
 }
 
+/* (MAKING TITLE STAY CENTERED) TITLE SECTION */
 .title-ctr {
   display: flex;
   flex-direction: column;
@@ -11,6 +12,7 @@
   height: 100vh;
 }
 
+/* HEADING FONT AND BORDER/SHADOW */
 h1 {
   font: 200px 'Viga', sans-serif;
   width: 1000px;
@@ -25,16 +27,21 @@ h1 {
 
 }
 
+/* LIST MADE*/
 li{
   font-family: 'Quicksand', sans-serif;
   font-size: 24px;
   list-style-type: none;
   margin-top: 20px;
 }
+
+/* LIST: TEXT */
 li a {
   color: white;
   text-decoration: none;
 }
+
+/* LIST: WRAPPER*/
 .project-list-container {
   margin-top:100px;
   margin-left: -200px;
